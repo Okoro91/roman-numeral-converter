@@ -26,6 +26,14 @@ const romanToNumber = (input) => {
         return "XL" + romanToNumber(input - 40);
 }else if(input === 50){
         return "L"
+}else if(input > 50 && input <= 89){
+        return "L" + romanToNumber(input - 50);
+}else if(input === 90){
+        return "XC"
+}else if(input > 90 && input <= 99){
+        return "XC" + romanToNumber(input - 90);
+}else if(input === 100){
+        return "C"
 }
 }
 
