@@ -6,9 +6,27 @@ const romanToNumber = (input) => {
 
     if(input === 1){
         return "I"
-    }else{
+    }else if(input > 1 && input <= 3){
         return "I" + romanToNumber(input - 1);
-    }
+    }else if(input === 4){
+        return "IV"
+}else if(input === 5){
+        return "V"
+}else if(input > 5 && input <= 8){
+        return "V" + romanToNumber(input - 5);
+    }else if(input === 9){
+        return "IX"
+}else if(input === 10){
+        return "X"
+}else if(input > 10 && input <= 39){
+        return "X" + romanToNumber(input - 10);
+}else if(input === 40){
+        return "XL"
+}else if(input > 10 && input <= 49){
+        return "XL" + romanToNumber(input - 40);
+}else if(input === 50){
+        return "L"
+}
 }
 
 const checkInput = () => {
@@ -29,4 +47,10 @@ const checkInput = () => {
 }
 
 convertButton.addEventListener("click", checkInput);
+
+inputNumber.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
+        checkInput();
+    }
+})
 
