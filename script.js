@@ -34,6 +34,26 @@ const romanToNumber = (input) => {
         return "XC" + romanToNumber(input - 90);
 }else if(input === 100){
         return "C"
+}else if(input > 100 && input <= 399){
+        return "C" + romanToNumber(input - 100);
+}else if(input === 400){
+        return "CD"
+}else if(input > 400 && input <= 499){
+        return "CD" + romanToNumber(input - 400);
+}else if(input === 500){
+        return "D"
+}else if(input > 500 && input <= 899){
+        return "D" + romanToNumber(input - 500);
+}else if(input === 900){
+        return "CM"
+}else if(input > 900 && input <= 999){
+        return "CM" + romanToNumber(input - 900);
+}else if(input === 1000){
+        return "M"
+}else if(input > 1000 && input <= 3999){
+        return "M" + romanToNumber(input - 1000);
+}else{
+    return "out of range"
 }
 }
 
