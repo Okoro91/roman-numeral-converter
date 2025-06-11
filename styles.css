@@ -75,6 +75,7 @@ button {
 }
 
 .output {
+    display: block;
     font-size: 2.5rem;
     width: 100%;
     height: calc(113px - 40px);
@@ -91,5 +92,22 @@ button {
     border: 2px solid var(--invalid);
     background-color: #de666c;
     color: var(--invalid);
+}
+
+@media (max-width: 750px){
+.container {
+    max-width: 350px;
+}
+
+h1 {
+    font-size: 2.1rem;
+}
+
+.output {
+  font-size: 1.1rem;
+  font-weight: 600;
+   height: calc(99px - 40px);
+  
+}
 }
 
